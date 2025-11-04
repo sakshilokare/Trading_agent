@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  background: #0f0f23;
+  color: white;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #1a1a2e;
+  border-bottom: 1px solid #333;
+}
+
+.app-header h1 {
+  color: #00d4ff;
+  font-size: 1.8rem;
+}
+
+.agent-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.status {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.status.active {
+  background: #00c853;
+  color: white;
+}
+
+.status.inactive {
+  background: #ff4444;
+  color: white;
+}
+
+.btn {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-start {
+  background: #00c853;
+  color: white;
+}
+
+.btn-stop {
+  background: #ff4444;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.tabs {
+  display: flex;
+  background: #1a1a2e;
+  border-bottom: 1px solid #333;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 1rem;
+  background: none;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1rem;
+}
+
+.tabs button:hover {
+  background: #252547;
+  color: white;
+}
+
+.tabs button.active {
+  background: #00d4ff;
+  color: white;
+  border-bottom: 3px solid #00d4ff;
+}
+
+.main-content {
+  padding: 2rem;
+}
+
+.card {
+  background: #1a1a2e;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #333;
+}
+
+.card h2 {
+  color: #00d4ff;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.grid-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.metric {
+  background: #252547;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.metric-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00d4ff;
+  margin-bottom: 0.5rem;
+}
+
+.metric-label {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.positive {
+  color: #00c853 !important;
+}
+
+.negative {
+  color: #ff4444 !important;
+}
+
+.hold {
+  color: #ffa726 !important;
+}
+
+.buy {
+  color: #00c853;
+  font-weight: bold;
+}
+
+.sell {
+  color: #ff4444;
+  font-weight: bold;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+
+.table th {
+  color: #00d4ff;
+  font-weight: bold;
+}
+
+.loading {
+  text-align: center;
+  color: #ccc;
+  padding: 20px;
+}
+
+.error {
+  color: #ff4444;
+  padding: 10px;
+  background: #332222;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.debug {
+  background: #333;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  font-family: monospace;
+}
+
+.chart-container {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  background: #252547;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+  
+  .app-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .tabs {
+    flex-direction: column;
+  }
+  
+  .chart-container {
+    height: 300px;
+  }
+}
